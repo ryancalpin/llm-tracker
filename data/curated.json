@@ -1,0 +1,406 @@
+{
+  "_comment": "Provider subscriptions (Claude Pro, ChatGPT Plus, Gemini Advanced, etc.) and free promos. The merge script combines this with OpenRouter's live pricing data.",
+  "updated_at": "2026-06-17",
+
+  "subscriptions": [
+    {
+      "provider": "Anthropic",
+      "name": "Claude Free",
+      "price_usd_per_month": 0,
+      "limits": "Limited messages on Sonnet 4.5, access to Haiku 4.5",
+      "notes": "Free tier. Light usage of Claude."
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Claude Pro",
+      "price_usd_per_month": 20,
+      "limits": "5x more usage than Free, access to Opus 4.7, all projects and artifacts",
+      "notes": "Standard paid tier."
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Claude Max (5x)",
+      "price_usd_per_month": 100,
+      "limits": "5x Pro usage",
+      "notes": "Heavy individual use."
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Claude Max (20x)",
+      "price_usd_per_month": 200,
+      "limits": "20x Pro usage",
+      "notes": "Power user tier."
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Claude Team",
+      "price_usd_per_month": 30,
+      "limits": "Per user, min 2 seats. Central billing & admin",
+      "notes": "Team plans start at $30/seat/mo."
+    },
+    {
+      "provider": "Anthropic",
+      "name": "Claude Enterprise",
+      "price_usd_per_month": null,
+      "limits": "Custom pricing, SSO, audit logs, expanded context",
+      "notes": "Contact sales."
+    },
+    {
+      "provider": "OpenAI",
+      "name": "ChatGPT Free",
+      "price_usd_per_month": 0,
+      "limits": "GPT-5 mini, limited GPT-5 access, basic image gen",
+      "notes": "Free tier."
+    },
+    {
+      "provider": "OpenAI",
+      "name": "ChatGPT Plus",
+      "price_usd_per_month": 20,
+      "limits": "GPT-5 access, advanced data analysis, DALL-E, file uploads, web browsing",
+      "notes": "Most popular paid tier."
+    },
+    {
+      "provider": "OpenAI",
+      "name": "ChatGPT Pro",
+      "price_usd_per_month": 200,
+      "limits": "Unlimited GPT-5 + o3-pro, o1 pro mode, Sora video, deep research",
+      "notes": "Power user / research tier."
+    },
+    {
+      "provider": "OpenAI",
+      "name": "ChatGPT Team",
+      "price_usd_per_month": 25,
+      "limits": "Per user, workspace with admin",
+      "notes": "Min 2 seats."
+    },
+    {
+      "provider": "OpenAI",
+      "name": "ChatGPT Enterprise",
+      "price_usd_per_month": null,
+      "limits": "Custom, SSO, SCIM, audit, unlimited GPT-5, advanced security",
+      "notes": "Contact sales."
+    },
+    {
+      "provider": "Google",
+      "name": "Gemini Free",
+      "price_usd_per_month": 0,
+      "limits": "Limited Gemini 2.5 Pro requests, Veo image gen, Deep Research",
+      "notes": "Free access via consumer app."
+    },
+    {
+      "provider": "Google",
+      "name": "Google AI Pro",
+      "price_usd_per_month": 20,
+      "limits": "Expanded Gemini 2.5 Pro, Veo 3 video, Jules coding agent, 2TB Drive",
+      "notes": "Includes Flow/Whisk/NotebookLM Pro."
+    },
+    {
+      "provider": "Google",
+      "name": "Google AI Ultra",
+      "price_usd_per_month": 250,
+      "limits": "Highest limits, Project Mariner, Veo 3, 30TB Drive, YouTube Premium",
+      "notes": "Top consumer tier."
+    },
+    {
+      "provider": "Google",
+      "name": "Google Workspace AI",
+      "price_usd_per_month": null,
+      "limits": "Add-on pricing varies by plan",
+      "notes": "Enterprise add-on."
+    },
+    {
+      "provider": "xAI",
+      "name": "Grok Free",
+      "price_usd_per_month": 0,
+      "limits": "Limited Grok 4 queries, image gen",
+      "notes": "Free via grok.com and X."
+    },
+    {
+      "provider": "xAI",
+      "name": "Grok Premium",
+      "price_usd_per_month": 8,
+      "limits": "Higher limits, image gen, Aurora",
+      "notes": "X Premium basic."
+    },
+    {
+      "provider": "xAI",
+      "name": "Grok Premium+",
+      "price_usd_per_month": 16,
+      "limits": "Highest rate limits, Grok 4 Heavy, Think Mode, DeepSearch",
+      "notes": "X Premium+ via X.com subscription."
+    },
+    {
+      "provider": "xAI",
+      "name": "Grok SuperGrok",
+      "price_usd_per_month": 30,
+      "limits": "Even higher limits, early access, multi-agent",
+      "notes": "Direct from grok.com, no X required."
+    },
+    {
+      "provider": "Mistral",
+      "name": "Le Chat Free",
+      "price_usd_per_month": 0,
+      "limits": "Limited Mistral Large / Medium messages",
+      "notes": "Free consumer chat."
+    },
+    {
+      "provider": "Mistral",
+      "name": "Le Chat Pro",
+      "price_usd_per_month": 15,
+      "limits": "Higher limits, web search, image gen (Flux), file uploads, agents",
+      "notes": "Consumer Pro tier."
+    },
+    {
+      "provider": "Mistral",
+      "name": "Le Chat Team",
+      "price_usd_per_month": 25,
+      "limits": "Per user, admin console, shared workspace",
+      "notes": "Team plan."
+    },
+    {
+      "provider": "Mistral",
+      "name": "Mistral Enterprise",
+      "price_usd_per_month": null,
+      "limits": "Custom, SSO, on-prem options",
+      "notes": "Contact sales."
+    },
+    {
+      "provider": "DeepSeek",
+      "name": "DeepSeek Free",
+      "price_usd_per_month": 0,
+      "limits": "Web chat with V3.2 and R1, limited daily use",
+      "notes": "Free consumer chat at chat.deepseek.com."
+    },
+    {
+      "provider": "DeepSeek",
+      "name": "DeepSeek API (pay-as-you-go)",
+      "price_usd_per_month": 0,
+      "limits": "No subscription, pay per token, very cheap",
+      "notes": "API-first, no required subscription."
+    },
+    {
+      "provider": "Moonshot",
+      "name": "Kimi Free",
+      "price_usd_per_month": 0,
+      "limits": "Web chat with Kimi K2.5 and K2 Thinking, limited daily",
+      "notes": "Free via kimi.com."
+    },
+    {
+      "provider": "Moonshot",
+      "name": "Kimi API (pay-as-you-go)",
+      "price_usd_per_month": 0,
+      "limits": "Pay per token, Chinese pricing in ¥, OpenAI-compatible",
+      "notes": "Platform.openjunkie.com / moonshot.cn."
+    },
+    {
+      "provider": "Moonshot",
+      "name": "Kimi Subscription",
+      "price_usd_per_month": 5,
+      "limits": "Higher usage, file uploads, priority",
+      "notes": "Kimi+ tier."
+    },
+    {
+      "provider": "Minimax",
+      "name": "Hailuo Free",
+      "price_usd_per_month": 0,
+      "limits": "Limited MiniMax M3 chats per day",
+      "notes": "Free via hailuo.ai."
+    },
+    {
+      "provider": "Minimax",
+      "name": "Hailuo Pro",
+      "price_usd_per_month": 10,
+      "limits": "Higher M3 limits, priority",
+      "notes": "Consumer Pro."
+    },
+    {
+      "provider": "Minimax",
+      "name": "Minimax API",
+      "price_usd_per_month": 0,
+      "limits": "Pay per token, OpenAI-compatible",
+      "notes": "API at api.minimaxi.com / platform.minimaxi.com."
+    },
+    {
+      "provider": "Xiaomi",
+      "name": "MiMo Free",
+      "price_usd_per_month": 0,
+      "limits": "Limited MiMo-VL and MiMo-7B via Xiaomi chat",
+      "notes": "Free consumer access."
+    },
+    {
+      "provider": "Xiaomi",
+      "name": "MiMo API",
+      "price_usd_per_month": 0,
+      "limits": "Pay per token",
+      "notes": "API via Xiaomi Cloud / HuggingFace."
+    },
+    {
+      "provider": "Qwen",
+      "name": "Qwen Chat Free",
+      "price_usd_per_month": 0,
+      "limits": "Limited Qwen3-Max, Qwen3-Plus, Qwen-Coder",
+      "notes": "chat.qwen.ai."
+    },
+    {
+      "provider": "Qwen",
+      "name": "Qwen API (Alibaba Cloud)",
+      "price_usd_per_month": 0,
+      "limits": "Pay per token via Bailian / Model Studio",
+      "notes": "International Model Studio at modelstudio.alibabacloud.com."
+    },
+    {
+      "provider": "Meta",
+      "name": "Meta Llama (open weights)",
+      "price_usd_per_month": 0,
+      "limits": "Open-source, self-host free",
+      "notes": "Free for self-hosting, no first-party chat product."
+    },
+    {
+      "provider": "Meta",
+      "name": "meta.ai",
+      "price_usd_per_month": 0,
+      "limits": "Limited Llama 4 access on consumer site",
+      "notes": "meta.ai consumer chat."
+    },
+    {
+      "provider": "NVIDIA",
+      "name": "build.nvidia.com",
+      "price_usd_per_month": 0,
+      "limits": "Free tier NIM API credits, then pay per token",
+      "notes": "Nemotron, Llama-Nemotron, etc."
+    },
+    {
+      "provider": "Cohere",
+      "name": "Cohere Free",
+      "price_usd_per_month": 0,
+      "limits": "Limited trial API keys, $5 free credits on signup",
+      "notes": "cohere.com."
+    },
+    {
+      "provider": "Cohere",
+      "name": "Cohere API (production)",
+      "price_usd_per_month": 0,
+      "limits": "Pay per token, enterprise tiers",
+      "notes": "Command A, Command R+."
+    },
+    {
+      "provider": "Perplexity",
+      "name": "Perplexity Free",
+      "price_usd_per_month": 0,
+      "limits": "Limited Pro searches per day",
+      "notes": "perplexity.ai."
+    },
+    {
+      "provider": "Perplexity",
+      "name": "Perplexity Pro",
+      "price_usd_per_month": 20,
+      "limits": "Unlimited Pro searches, file uploads, image gen, model picker",
+      "notes": "Access to GPT-5, Claude, Grok, Sonar."
+    },
+    {
+      "provider": "Perplexity",
+      "name": "Perplexity Enterprise Pro",
+      "price_usd_per_month": 40,
+      "limits": "Per user, SSO, admin",
+      "notes": "Team plans."
+    },
+    {
+      "provider": "Amazon",
+      "name": "AWS Bedrock (Nova + others)",
+      "price_usd_per_month": 0,
+      "limits": "Pay per token, no subscription required",
+      "notes": "Nova Lite/Pro/ Premier, plus Claude, Llama, Mistral."
+    }
+  ],
+
+  "free_promos": [
+    {
+      "model_pattern": "deepseek/deepseek-chat-v3",
+      "provider": "DeepSeek",
+      "promo": "Free on OpenRouter (rate-limited)",
+      "start": "2025-05-01",
+      "end": "ongoing",
+      "notes": "DeepSeek V3 free tier on OpenRouter with rate limits."
+    },
+    {
+      "model_pattern": "deepseek/deepseek-r1",
+      "provider": "DeepSeek",
+      "promo": "Free on OpenRouter (rate-limited)",
+      "start": "2025-01-20",
+      "end": "ongoing",
+      "notes": "DeepSeek R1 free tier, with reasoning tokens."
+    },
+    {
+      "model_pattern": "qwen/qwen-2.5-72b-instruct",
+      "provider": "Qwen",
+      "promo": "Free tier (rate-limited)",
+      "start": "2024-09-19",
+      "end": "ongoing",
+      "notes": "Qwen 2.5 72B free on OpenRouter."
+    },
+    {
+      "model_pattern": "meta-llama/llama-3.3-70b-instruct",
+      "provider": "Meta",
+      "promo": "Free tier (rate-limited)",
+      "start": "2024-12-06",
+      "end": "ongoing",
+      "notes": "Llama 3.3 70B free on OpenRouter."
+    },
+    {
+      "model_pattern": "mistralai/mistral-7b-instruct",
+      "provider": "Mistral",
+      "promo": "Free tier (rate-limited)",
+      "start": "2024-01-01",
+      "end": "ongoing",
+      "notes": "Mistral 7B free on OpenRouter."
+    },
+    {
+      "model_pattern": "google/gemini-2.0-flash-exp",
+      "provider": "Google",
+      "promo": "Free on Google AI Studio (rate-limited)",
+      "start": "2024-12-11",
+      "end": "ongoing",
+      "notes": "Gemini 2.0 Flash experimental free tier."
+    },
+    {
+      "model_pattern": "google/gemini-2.5-pro",
+      "provider": "Google",
+      "promo": "Free on Google AI Studio (rate-limited)",
+      "start": "2025-03-31",
+      "end": "ongoing",
+      "notes": "Gemini 2.5 Pro has free tier in AI Studio."
+    },
+    {
+      "model_pattern": "nvidia/llama-3.1-nemotron-70b-instruct",
+      "provider": "NVIDIA",
+      "promo": "Free on build.nvidia.com (rate-limited)",
+      "start": "2024-10-01",
+      "end": "ongoing",
+      "notes": "Nemotron 70B free NIM credits."
+    },
+    {
+      "model_pattern": "minimax/minimax-m2",
+      "provider": "Minimax",
+      "promo": "Launch promo: 50% off API",
+      "start": "2026-06-01",
+      "end": "2026-08-31",
+      "notes": "MiniMax M2 launch discount."
+    },
+    {
+      "model_pattern": "kimi/kimi-k2",
+      "provider": "Moonshot",
+      "promo": "Open-source free weights",
+      "start": "2025-07-11",
+      "end": "ongoing",
+      "notes": "Kimi K2 weights free on HuggingFace under modified MIT."
+    },
+    {
+      "model_pattern": "minimax/minimax-m3",
+      "provider": "Minimax",
+      "promo": "Open-source free weights",
+      "start": "2026-04-15",
+      "end": "ongoing",
+      "notes": "MiniMax M3 weights on HuggingFace under Apache 2.0."
+    }
+  ]
+}

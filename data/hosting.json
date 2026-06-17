@@ -1,0 +1,271 @@
+{
+  "_comment": "Map of model ID patterns to hosting services. When user clicks a model, this list shows where they can use it. Add new ones as new providers come online.",
+
+  "anthropic/claude-opus-4.7": [
+    {"name": "Anthropic direct API", "url": "https://console.anthropic.com", "type": "api", "notes": "Native, full features."},
+    {"name": "Claude Pro/Max subscription", "url": "https://claude.ai", "type": "subscription", "price_usd_per_month": 20, "notes": "$20 Pro / $100 Max 5x / $200 Max 20x."},
+    {"name": "Amazon Bedrock", "url": "https://aws.amazon.com/bedrock", "type": "api", "notes": "AWS-native."},
+    {"name": "Google Vertex AI", "url": "https://console.cloud.google.com/vertex-ai", "type": "api", "notes": "GCP-native."},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator", "notes": "Multi-provider routing."},
+    {"name": "Cursor", "url": "https://cursor.com", "type": "integrated", "price_usd_per_month": 20, "notes": "IDE integration."},
+    {"name": "Cline / Continue.dev", "url": "https://cline.bot", "type": "agent", "notes": "Coding agent."}
+  ],
+  "anthropic/claude-sonnet-4.5": [
+    {"name": "Anthropic direct API", "url": "https://console.anthropic.com", "type": "api"},
+    {"name": "Claude Pro/Max subscription", "url": "https://claude.ai", "type": "subscription", "price_usd_per_month": 20},
+    {"name": "Amazon Bedrock", "url": "https://aws.amazon.com/bedrock", "type": "api"},
+    {"name": "Google Vertex AI", "url": "https://console.cloud.google.com/vertex-ai", "type": "api"},
+    {"name": "Microsoft Foundry (Azure)", "url": "https://ai.azure.com", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "Cursor / Windsurf / Cline", "url": "https://cursor.com", "type": "integrated", "price_usd_per_month": 20}
+  ],
+  "anthropic/claude-haiku-4.5": [
+    {"name": "Anthropic direct API", "url": "https://console.anthropic.com", "type": "api"},
+    {"name": "Claude Free/Pro", "url": "https://claude.ai", "type": "subscription", "price_usd_per_month": 0},
+    {"name": "Amazon Bedrock", "url": "https://aws.amazon.com/bedrock", "type": "api"},
+    {"name": "Google Vertex AI", "url": "https://console.cloud.google.com/vertex-ai", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+
+  "openai/gpt-5": [
+    {"name": "OpenAI API", "url": "https://platform.openai.com", "type": "api"},
+    {"name": "ChatGPT Plus/Pro/Team", "url": "https://chatgpt.com", "type": "subscription", "price_usd_per_month": 20, "notes": "$20 Plus / $200 Pro."},
+    {"name": "Microsoft Foundry (Azure)", "url": "https://ai.azure.com", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "Cursor / Continue / Cline", "url": "https://cursor.com", "type": "integrated", "price_usd_per_month": 20}
+  ],
+  "openai/gpt-5-mini": [
+    {"name": "OpenAI API", "url": "https://platform.openai.com", "type": "api"},
+    {"name": "ChatGPT Free/Plus", "url": "https://chatgpt.com", "type": "subscription", "price_usd_per_month": 0},
+    {"name": "Microsoft Foundry (Azure)", "url": "https://ai.azure.com", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+  "openai/gpt-5-nano": [
+    {"name": "OpenAI API", "url": "https://platform.openai.com", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+  "openai/o3": [
+    {"name": "OpenAI API (responses)", "url": "https://platform.openai.com", "type": "api"},
+    {"name": "ChatGPT Pro", "url": "https://chatgpt.com", "type": "subscription", "price_usd_per_month": 200, "notes": "o3-pro mode in Pro tier."},
+    {"name": "Microsoft Foundry (Azure)", "url": "https://ai.azure.com", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+  "openai/o4-mini": [
+    {"name": "OpenAI API (responses)", "url": "https://platform.openai.com", "type": "api"},
+    {"name": "ChatGPT Plus/Pro", "url": "https://chatgpt.com", "type": "subscription", "price_usd_per_month": 20},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+  "openai/gpt-4.1": [
+    {"name": "OpenAI API", "url": "https://platform.openai.com", "type": "api"},
+    {"name": "Microsoft Foundry (Azure)", "url": "https://ai.azure.com", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+
+  "google/gemini-2.5-pro": [
+    {"name": "Google AI Studio (free tier)", "url": "https://aistudio.google.com", "type": "api", "notes": "Free with rate limits."},
+    {"name": "Gemini API (paid)", "url": "https://aistudio.google.com/apikey", "type": "api"},
+    {"name": "Vertex AI", "url": "https://console.cloud.google.com/vertex-ai", "type": "api"},
+    {"name": "Gemini App subscription", "url": "https://gemini.google.com", "type": "subscription", "price_usd_per_month": 20, "notes": "Google AI Pro $20 / Ultra $250."},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+  "google/gemini-2.5-flash": [
+    {"name": "Google AI Studio (free tier)", "url": "https://aistudio.google.com", "type": "api"},
+    {"name": "Gemini API", "url": "https://aistudio.google.com/apikey", "type": "api"},
+    {"name": "Vertex AI", "url": "https://console.cloud.google.com/vertex-ai", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+  "google/gemini-2.5-flash-lite": [
+    {"name": "Google AI Studio (free tier)", "url": "https://aistudio.google.com", "type": "api"},
+    {"name": "Gemini API", "url": "https://aistudio.google.com/apikey", "type": "api"},
+    {"name": "Vertex AI", "url": "https://console.cloud.google.com/vertex-ai", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+
+  "x-ai/grok-4": [
+    {"name": "xAI API", "url": "https://console.x.ai", "type": "api"},
+    {"name": "Grok app / X.com", "url": "https://grok.com", "type": "subscription", "price_usd_per_month": 8, "notes": "X Premium $8 / Premium+ $16 / SuperGrok $30."},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+  "x-ai/grok-4-heavy": [
+    {"name": "xAI API", "url": "https://console.x.ai", "type": "api"},
+    {"name": "SuperGrok Heavy", "url": "https://grok.com", "type": "subscription", "price_usd_per_month": 300, "notes": "Heavy multi-agent."}
+  ],
+  "x-ai/grok-code-fast-1": [
+    {"name": "xAI API", "url": "https://console.x.ai", "type": "api"},
+    {"name": "Cursor / Cline", "url": "https://cursor.com", "type": "integrated"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+
+  "deepseek/deepseek-v3.2": [
+    {"name": "DeepSeek API", "url": "https://platform.deepseek.com", "type": "api"},
+    {"name": "DeepSeek Chat (free)", "url": "https://chat.deepseek.com", "type": "subscription", "price_usd_per_month": 0, "notes": "Free consumer chat."},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator", "notes": "Often has free rate-limited tier."},
+    {"name": "Microsoft Foundry (Azure)", "url": "https://ai.azure.com", "type": "api"},
+    {"name": "Cursor", "url": "https://cursor.com", "type": "integrated"}
+  ],
+  "deepseek/deepseek-r1": [
+    {"name": "DeepSeek API", "url": "https://platform.deepseek.com", "type": "api"},
+    {"name": "DeepSeek Chat (free)", "url": "https://chat.deepseek.com", "type": "subscription", "price_usd_per_month": 0},
+    {"name": "OpenRouter (often free)", "url": "https://openrouter.ai", "type": "aggregator", "notes": "Free rate-limited tier."},
+    {"name": "HuggingFace Inference", "url": "https://huggingface.co/deepseek-ai", "type": "api"},
+    {"name": "Together AI", "url": "https://api.together.xyz", "type": "api"},
+    {"name": "Fireworks AI", "url": "https://fireworks.ai", "type": "api"},
+    {"name": "Self-host (HuggingFace)", "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1", "type": "self-host", "notes": "Open weights, MIT-ish."}
+  ],
+  "deepseek/deepseek-coder-v3": [
+    {"name": "DeepSeek API", "url": "https://platform.deepseek.com", "type": "api"},
+    {"name": "OpenRouter (free)", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "Together AI", "url": "https://api.together.xyz", "type": "api"},
+    {"name": "Self-host", "url": "https://huggingface.co/deepseek-ai", "type": "self-host", "notes": "Open weights."}
+  ],
+
+  "moonshotai/kimi-k2.5": [
+    {"name": "Moonshot API", "url": "https://platform.moonshot.cn", "type": "api", "notes": "China: ¥ pricing. International via OpenRouter."},
+    {"name": "Kimi Chat", "url": "https://kimi.com", "type": "subscription", "price_usd_per_month": 0, "notes": "Free tier with limits."},
+    {"name": "Kimi+", "url": "https://kimi.com", "type": "subscription", "price_usd_per_month": 5},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "HuggingFace (open weights)", "url": "https://huggingface.co/moonshotai", "type": "self-host", "notes": "Modified MIT."}
+  ],
+  "moonshotai/kimi-k2-thinking": [
+    {"name": "Moonshot API", "url": "https://platform.moonshot.cn", "type": "api"},
+    {"name": "Kimi Chat", "url": "https://kimi.com", "type": "subscription", "price_usd_per_month": 0},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+
+  "minimax/minimax-m3": [
+    {"name": "MiniMax API", "url": "https://platform.minimaxi.com", "type": "api", "notes": "OpenAI-compatible."},
+    {"name": "Hailuo AI Chat", "url": "https://hailuo.ai", "type": "subscription", "price_usd_per_month": 0, "notes": "Free / Pro $10."},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "HuggingFace (open weights)", "url": "https://huggingface.co/MiniMaxAI", "type": "self-host", "notes": "Apache 2.0."}
+  ],
+  "minimax/minimax-m2": [
+    {"name": "MiniMax API", "url": "https://platform.minimaxi.com", "type": "api"},
+    {"name": "Hailuo AI Chat", "url": "https://hailuo.ai", "type": "subscription", "price_usd_per_month": 0},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/MiniMaxAI", "type": "self-host", "notes": "Open weights."}
+  ],
+
+  "xiaomi/mimo-v2-pro": [
+    {"name": "Xiaomi Cloud API", "url": "https://xiaomi.ai", "type": "api"},
+    {"name": "Xiaomi Chat", "url": "https://chat.xiaomi.com", "type": "subscription", "price_usd_per_month": 0},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/XiaomiMiMo", "type": "self-host", "notes": "Open weights."}
+  ],
+
+  "mistralai/mistral-large-3": [
+    {"name": "Mistral API (La Plateforme)", "url": "https://console.mistral.ai", "type": "api"},
+    {"name": "Le Chat Pro/Team", "url": "https://chat.mistral.ai", "type": "subscription", "price_usd_per_month": 15, "notes": "$15 Pro / $25 Team."},
+    {"name": "Microsoft Foundry (Azure)", "url": "https://ai.azure.com", "type": "api"},
+    {"name": "Amazon Bedrock", "url": "https://aws.amazon.com/bedrock", "type": "api"},
+    {"name": "Google Vertex AI", "url": "https://console.cloud.google.com/vertex-ai", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+  "mistralai/codestral-3": [
+    {"name": "Mistral API", "url": "https://console.mistral.ai", "type": "api"},
+    {"name": "Le Chat Pro", "url": "https://chat.mistral.ai", "type": "subscription", "price_usd_per_month": 15},
+    {"name": "Continue.dev / Cline", "url": "https://continue.dev", "type": "agent"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/mistralai", "type": "self-host", "notes": "Open weights."}
+  ],
+  "mistralai/magistral-medium": [
+    {"name": "Mistral API", "url": "https://console.mistral.ai", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/mistralai", "type": "self-host"}
+  ],
+
+  "meta-llama/llama-4-maverick": [
+    {"name": "Meta.ai", "url": "https://meta.ai", "type": "subscription", "price_usd_per_month": 0},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "Together AI", "url": "https://api.together.xyz", "type": "api"},
+    {"name": "Fireworks AI", "url": "https://fireworks.ai", "type": "api"},
+    {"name": "Groq", "url": "https://groq.com", "type": "api", "notes": "Fast inference."},
+    {"name": "Microsoft Foundry (Azure)", "url": "https://ai.azure.com", "type": "api"},
+    {"name": "Amazon Bedrock", "url": "https://aws.amazon.com/bedrock", "type": "api"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/meta-llama", "type": "self-host", "notes": "Llama community license."}
+  ],
+  "meta-llama/llama-4-scout": [
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "Together AI", "url": "https://api.together.xyz", "type": "api"},
+    {"name": "Groq", "url": "https://groq.com", "type": "api"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/meta-llama", "type": "self-host"}
+  ],
+  "meta-llama/llama-3.3-70b-instruct": [
+    {"name": "OpenRouter (free)", "url": "https://openrouter.ai", "type": "aggregator", "notes": "Free rate-limited tier."},
+    {"name": "Together AI", "url": "https://api.together.xyz", "type": "api"},
+    {"name": "Groq", "url": "https://groq.com", "type": "api"},
+    {"name": "Fireworks AI", "url": "https://fireworks.ai", "type": "api"},
+    {"name": "Replicate", "url": "https://replicate.com", "type": "api"},
+    {"name": "Amazon Bedrock", "url": "https://aws.amazon.com/bedrock", "type": "api"},
+    {"name": "Self-host", "url": "https://huggingface.co/meta-llama", "type": "self-host"}
+  ],
+
+  "qwen/qwen3-max": [
+    {"name": "Alibaba Model Studio (Bailian)", "url": "https://modelstudio.alibabacloud.com", "type": "api", "notes": "International Alibaba Cloud."},
+    {"name": "Qwen Chat", "url": "https://chat.qwen.ai", "type": "subscription", "price_usd_per_month": 0},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/Qwen", "type": "self-host", "notes": "Open weights."}
+  ],
+  "qwen/qwen3-coder-480b": [
+    {"name": "Alibaba Model Studio", "url": "https://modelstudio.alibabacloud.com", "type": "api"},
+    {"name": "Qwen Chat", "url": "https://chat.qwen.ai", "type": "subscription", "price_usd_per_month": 0},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/Qwen", "type": "self-host"}
+  ],
+  "qwen/qwq-32b-preview": [
+    {"name": "Alibaba Model Studio", "url": "https://modelstudio.alibabacloud.com", "type": "api"},
+    {"name": "Qwen Chat", "url": "https://chat.qwen.ai", "type": "subscription", "price_usd_per_month": 0},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/Qwen", "type": "self-host"}
+  ],
+
+  "nvidia/llama-3.3-nemotron-90b": [
+    {"name": "build.nvidia.com (free credits)", "url": "https://build.nvidia.com", "type": "api", "notes": "Free tier NIM credits."},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/nvidia", "type": "self-host", "notes": "Open weights."}
+  ],
+  "nvidia/nemotron-4-340b": [
+    {"name": "build.nvidia.com", "url": "https://build.nvidia.com", "type": "api"},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/nvidia", "type": "self-host"}
+  ],
+
+  "z-ai/glm-5.2": [
+    {"name": "Z.AI API", "url": "https://z.ai", "type": "api"},
+    {"name": "Z.AI Chat", "url": "https://chat.z.ai", "type": "subscription", "price_usd_per_month": 0},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+
+  "cohere/command-a": [
+    {"name": "Cohere API", "url": "https://dashboard.cohere.com", "type": "api", "notes": "$5 free trial credits."},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"},
+    {"name": "Amazon Bedrock", "url": "https://aws.amazon.com/bedrock", "type": "api"},
+    {"name": "Microsoft Foundry (Azure)", "url": "https://ai.azure.com", "type": "api"}
+  ],
+
+  "perplexity/sonar": [
+    {"name": "Perplexity API", "url": "https://docs.perplexity.ai", "type": "api"},
+    {"name": "Perplexity Pro", "url": "https://perplexity.ai", "type": "subscription", "price_usd_per_month": 20, "notes": "Pro $20, Enterprise Pro $40."},
+    {"name": "OpenRouter", "url": "https://openrouter.ai", "type": "aggregator"}
+  ],
+  "perplexity/sonar-pro": [
+    {"name": "Perplexity API", "url": "https://docs.perplexity.ai", "type": "api"},
+    {"name": "Perplexity Pro", "url": "https://perplexity.ai", "type": "subscription", "price_usd_per_month": 20}
+  ],
+
+  "amazon/nova-pro-v1": [
+    {"name": "Amazon Bedrock", "url": "https://aws.amazon.com/bedrock", "type": "api", "notes": "Native AWS."}
+  ],
+
+  "microsoft/phi-4": [
+    {"name": "Microsoft Foundry (Azure)", "url": "https://ai.azure.com", "type": "api"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/microsoft", "type": "self-host", "notes": "Open weights, MIT."},
+    {"name": "Ollama", "url": "https://ollama.com", "type": "self-host", "notes": "Easy local run."}
+  ],
+
+  "ibm-granite/granite-4-large": [
+    {"name": "IBM watsonx.ai", "url": "https://dataplatform.cloud.ibm.com", "type": "api"},
+    {"name": "HuggingFace", "url": "https://huggingface.co/ibm-granite", "type": "self-host", "notes": "Open weights, Apache 2.0."},
+    {"name": "Ollama", "url": "https://ollama.com", "type": "self-host"},
+    {"name": "Replicate", "url": "https://replicate.com", "type": "api"}
+  ]
+}
