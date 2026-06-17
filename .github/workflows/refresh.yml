@@ -1,0 +1,41 @@
+name: Refresh LLM Data
+
+on:
+  schedule:
+    # Every 4 hours at minute 0
+    - cron: '0 */4 * * *'
+  workflow_dispatch:  # manual trigger
+  push:
+    paths:
+      - 'data/curated.json'
+      - 'data/hosting.json'
+      - 'data/specialties.json'
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch & build
+        run: |
+          python3 scripts/fetch_openrouter.py
+          python3 scripts/fetch_specialties.py
+          python3 scripts/merge.py
+          cp -f data/models.json static/models.json
+          python3 scripts/build_fat.py
+          cp -f static/index-fat.html static/index.html
+
+      - name: Commit updated data
+        run: |
+          git config user.name 'LLM Tracker Bot'
+          git config user.email 'bot@llmtracker.dev'
+          git add static/index.html static/models.json data/models.json data/openrouter_raw.json static/sync_state.json || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-refresh: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
