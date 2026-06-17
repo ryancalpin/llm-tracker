@@ -26,7 +26,6 @@ jobs:
           python3 scripts/merge.py
           cp -f data/models.json static/models.json
           python3 scripts/build_fat.py
-          cp -f static/index-fat.html static/index.html
 
       - name: Commit updated data
         run: |
