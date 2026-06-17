@@ -1,21 +1,28 @@
-name: Refresh LLM Data
+name: Refresh LLM Data & Deploy
 
 on:
   schedule:
-    # Every 4 hours at minute 0
     - cron: '0 */4 * * *'
-  workflow_dispatch:  # manual trigger
+  workflow_dispatch:
   push:
     paths:
       - 'data/curated.json'
       - 'data/hosting.json'
       - 'data/specialties.json'
 
+# Allow Pages deployment
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -27,11 +34,23 @@ jobs:
           cp -f data/models.json static/models.json
           python3 scripts/build_fat.py
 
-      - name: Commit updated data
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'static/'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Commit updated data sources
         run: |
           git config user.name 'LLM Tracker Bot'
           git config user.email 'bot@llmtracker.dev'
-          git add static/index.html static/models.json data/models.json data/openrouter_raw.json static/sync_state.json || true
+          git add data/models.json data/openrouter_raw.json static/sync_state.json || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
