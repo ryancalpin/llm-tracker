@@ -620,6 +620,7 @@ function setupEvents() {
       positionCard();
       window.addEventListener('resize', positionCard, { once: true });
       }
+    }
 
   $$('.cat-pill').forEach(btn => {
     btn.addEventListener('click', () => {
