@@ -1,0 +1,7 @@
+# Netlify redirect rules for calpinlabs.com
+# LLM Tracker lives at /llms
+/llms/*  /index.html  200
+
+# Add more routes below as you add pages/apps
+# Example: /app/*  /app/index.html  200
+# Example: /privacy  /privacy.html  200
