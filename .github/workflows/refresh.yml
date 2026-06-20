@@ -26,12 +26,14 @@ jobs:
           python3 scripts/build_fat.py
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v3.0
-        with:
-          publish-dir: static
-          production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Auto-refresh: ${{ github.event.head_commit.message || github.event_name }}"
+        run: |
+          npm install -g netlify-cli
+          netlify deploy \
+            --dir=static \
+            --site="$NETLIFY_SITE_ID" \
+            --auth="$NETLIFY_AUTH_TOKEN" \
+            --prod \
+            --message="Auto-refresh: ${{ github.event.head_commit.message || github.event_name }}"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
