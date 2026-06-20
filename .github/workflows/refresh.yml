@@ -1,4 +1,4 @@
-name: Refresh LLM Data & Deploy to Netlify
+name: Refresh LLM Data & Deploy
 
 on:
   schedule:
@@ -10,6 +10,16 @@ on:
       - 'data/hosting.json'
       - 'data/specialties.json'
       - 'static/*'
+
+# Allow Pages deployment
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -25,15 +35,26 @@ jobs:
           cp -f data/models.json static/models.json
           python3 scripts/build_fat.py
 
-      - name: Deploy to Netlify
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'static/'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Commit updated data sources
         run: |
-          npm install -g netlify-cli
-          netlify deploy \
-            --dir=static \
-            --site="$NETLIFY_SITE_ID" \
-            --auth="$NETLIFY_AUTH_TOKEN" \
-            --prod \
-            --message="Auto-refresh: ${{ github.event.head_commit.message || github.event_name }}"
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          git config user.name 'LLM Tracker Bot'
+          git config user.email 'bot@llmtracker.dev'
+          git add data/models.json data/openrouter_raw.json static/sync_state.json || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-refresh: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
